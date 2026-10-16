@@ -1,0 +1,16 @@
+/** Tiny DOM helpers shared by the UI modules. */
+
+export function el<K extends keyof HTMLElementTagNameMap>(
+  tag: K,
+  className?: string,
+  text?: string,
+): HTMLElementTagNameMap[K] {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+export function clearChildren(node: HTMLElement): void {
+  while (node.firstChild) node.removeChild(node.firstChild);
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lagos-sim-3d",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Lagos Sim 3D — Phase 1 mobile-first 3D neighbourhood prototype",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "node scripts/make-icons.mjs && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview --host",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/run-tests.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/three": "^0.186.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.14"
+  }
+}
